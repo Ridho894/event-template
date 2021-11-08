@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 import "./App.css";
 
 function App() {
   return (
-    <div className="bg-red-500 p-12">
-      <h1 className={"text-3xl"}>Hello World</h1>
+    <div>
+      <h1>App</h1>
     </div>
   );
 }
