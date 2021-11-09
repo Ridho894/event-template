@@ -1,13 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Dashboard from './pages/Dashboard';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+        <Route path='*' component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
