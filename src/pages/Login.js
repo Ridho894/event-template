@@ -7,14 +7,15 @@ const Login = () => {
       <div className={"text-center justify-center flex-col flex items-center"}>
         <h1 className={"text-5xl mb-20"}>LOGIN</h1>
         <div className={"flex flex-col space-y-9"}>
-          <input placeholder="Email" />
-          <input placeholder="Password" />
+          <input placeholder="Email" className={"p-2 border-2 outline-none"} />
+          <input placeholder="Password" className={"p-2 border-2 outline-none"} />
         </div>
+        <button>LOGIN</button>
       </div>
       <div>
         <div
           className={
-            "bg-contain bg-no-repeat bg-right h-screen flex flex-col justify-center"
+            "bg-contain bg-no-repeat bg-right h-screen"
           }
           style={{ backgroundImage: `url(${background})` }}
         ></div>

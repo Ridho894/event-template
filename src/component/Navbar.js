@@ -1,7 +1,7 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import React, { Fragment } from "react";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { useHistory } from "react-router";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -15,6 +15,10 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const history = useHistory();
+  function handleLoginPage() {
+    history.push("/Login");
+  }
   return (
     <Disclosure as="nav">
       {({ open }) => (
@@ -62,6 +66,7 @@ export default function Navbar() {
                   className={
                     "hidden md:block text-white bg-blue-600 p-2 px-6 rounded-full"
                   }
+                  onClick={handleLoginPage}
                 >
                   GET TICKETS
                 </button>
