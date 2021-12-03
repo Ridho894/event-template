@@ -1,11 +1,18 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkBlue: "#07133A",
+        darkBlues: "#000425"
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
