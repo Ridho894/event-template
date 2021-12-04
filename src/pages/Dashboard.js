@@ -6,6 +6,33 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useHistory } from "react-router-dom";
 
+const day = [
+  {
+    number: 1,
+    date: "24 Desember 2021",
+    time: "07:00 - 08:00",
+    title: "Registration",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+  },
+  {
+    number: 2,
+    date: "25 Desember 2021",
+    time: "07:00 - 08:00",
+    title: "Registration",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+  },
+  {
+    number: 3,
+    date: "26 Desember 2021",
+    time: "07:00 - 08:00",
+    title: "Registration",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+  },
+];
+
 const CEO = [
   {
     name: "James",
@@ -78,7 +105,7 @@ const Dashboard = () => {
         </div>
         {/* Sectio 1 */}
         <div
-          data-aos="fade-up"
+          data-aos="fade-right"
           className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8"}
         >
           <h1
@@ -135,7 +162,7 @@ const Dashboard = () => {
       {/* Section 3 */}
       <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8 py-6"}>
         <div className={"bg-darkBlues text-center py-60 space-y-24"}>
-          <div className={"space-y-6"}>
+          <div className={"space-y-6"} data-aos="fade-up">
             <h1 className={"text-white text-6xl font-bold"}>
               Provided perks for you during the conference
             </h1>
@@ -155,6 +182,24 @@ const Dashboard = () => {
             <h1>Pitch Competition</h1>
             <h1>Networking Area</h1>
             <h1>Coaching Sessions</h1>
+          </div>
+        </div>
+      </div>
+      {/* Section 4 */}
+      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8 py-6"}>
+        <div className={"grid grid-cols-2 py-60"}>
+          <div className={"text-white"}>
+            <h1 className={"text-8xl font-bold"}>Schedule And Agenda</h1>
+          </div>
+          <div>
+            {day.map((index) => (
+              <div className={""}>
+                <h1 className={"text-white text-5xl font-bold"}>
+                  Day 0{index.number}
+                </h1>
+                <p className={"text-gray-500 text-2xl"}>{index.date}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
