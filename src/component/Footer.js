@@ -17,8 +17,7 @@ const Footer = () => {
     "
       >
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <a
-            href=""
+          <p
             className="
           flex
           title-font
@@ -31,7 +30,7 @@ const Footer = () => {
           >
             <i className="fas fa-cubes fa-lg text-purple-500"></i>
             <span className="ml-3 text-xl">Tailwind elements</span>
-          </a>
+          </p>
           <p className="mt-2 text-sm text-gray-500">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
             quam?
@@ -63,24 +62,16 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">First Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Second Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Third Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
               </li>
             </nav>
           </div>
@@ -99,24 +90,16 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">First Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Second Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Third Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
               </li>
             </nav>
           </div>
@@ -135,24 +118,16 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">First Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Second Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Third Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
               </li>
             </nav>
           </div>
@@ -171,24 +146,16 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">First Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Second Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Third Link</p>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
+                <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
               </li>
             </nav>
           </div>
@@ -207,13 +174,13 @@ const Footer = () => {
         >
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © 2021 Copyright:
-            <a
+            <p
               href="https://www.tailwind-elements.com/"
               className="text-gray-600 ml-1"
               target="_blank"
             >
               Tailwind Elements
-            </a>
+            </p>
           </p>
           <span
             className="
@@ -224,21 +191,21 @@ const Footer = () => {
           sm:justify-start
         "
           >
-            <a href="" className="text-gray-500">
+            <p className="text-gray-500">
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="" className="ml-3 text-gray-500">
+            </p>
+            <p className="ml-3 text-gray-500">
               <i className="fab fa-twitter"></i>
-            </a>
-            <a href="" className="ml-3 text-gray-500">
+            </p>
+            <p className="ml-3 text-gray-500">
               <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="" className="ml-3 text-gray-500">
+            </p>
+            <p className="ml-3 text-gray-500">
               <i className="fab fa-youtube"></i>
-            </a>
-            <a href="" className="ml-3 text-gray-500">
+            </p>
+            <p className="ml-3 text-gray-500">
               <i className="fab fa-instagram"></i>
-            </a>
+            </p>
           </span>
         </div>
       </div>
@@ -246,4 +213,4 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Footer;

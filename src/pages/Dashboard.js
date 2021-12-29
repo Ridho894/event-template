@@ -151,7 +151,7 @@ const Dashboard = () => {
           <div className={"grid grid-cols-2 gap-9 sm:gap-10 xl:grid-cols-4"}>
             {CEO.map((index) => (
               <div className={"flex flex-col items-center space-y-2"}>
-                <img className={"rounded-full"} src={index.picture} />
+                <img className={"rounded-full"} src={index.picture} alt="hello" />
                 <h1 className={"text-white text-3xl"}>{index.name}</h1>
                 <p className={"text-gray-500 text-xl"}>{index.position}</p>
               </div>
@@ -203,6 +203,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
