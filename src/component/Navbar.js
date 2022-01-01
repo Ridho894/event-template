@@ -17,7 +17,7 @@ function classNames(...classes) {
 export default function Navbar() {
   const history = useHistory();
   function handleLoginPage() {
-    history.push("/Login");
+    history.push("/Register");
   }
   return (
     <Disclosure as="nav">

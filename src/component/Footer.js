@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 bg-red-400">
       <div
         className="
-      container
-      px-5
-      py-24
+        bg-blue-700
+      px-24
+        py-24
       mx-auto
       flex
       md:items-center
@@ -164,10 +164,9 @@ const Footer = () => {
       <div className="bg-gray-100">
         <div
           className="
-        container
+          px-24 
         mx-auto
         py-4
-        px-5
         flex flex-wrap flex-col
         sm:flex-row
       "
@@ -175,11 +174,10 @@ const Footer = () => {
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © 2021 Copyright:
             <p
-              href="https://www.tailwind-elements.com/"
-              className="text-gray-600 ml-1"
-              target="_blank"
+              onClick={() => window.open("https://drop-zhip.vercel.app/")}
+              className="text-gray-600 cursor-pointer"
             >
-              Tailwind Elements
+              DropZhip.co.id
             </p>
           </p>
           <span

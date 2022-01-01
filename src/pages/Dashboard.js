@@ -5,59 +5,63 @@ import background from "../image/background.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useHistory } from "react-router-dom";
+import SensorsIcon from "@mui/icons-material/Sensors";
+import AssignmentIcon from "@mui/icons-material/Assignment";
+import BusinessIcon from "@mui/icons-material/Business";
+import EventAvailableIcon from "@mui/icons-material/EventAvailable";
+import DayTabs from "../component/DayTabs";
 
-const day = [
+const Conference = [
   {
-    number: 1,
-    date: "24 Desember 2021",
-    time: "07:00 - 08:00",
-    title: "Registration",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+    id: 1,
+    title: "Main Entrace",
+    icon: <BusinessIcon style={{ width: 100, height: 100 }} />,
   },
   {
-    number: 2,
-    date: "25 Desember 2021",
-    time: "07:00 - 08:00",
-    title: "Registration",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+    id: 2,
+    title: "Pitch Competition",
+    icon: <EventAvailableIcon style={{ width: 100, height: 100 }} />,
   },
   {
-    number: 3,
-    date: "26 Desember 2021",
-    time: "07:00 - 08:00",
-    title: "Registration",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+    id: 3,
+    title: "Networking Area",
+    icon: <SensorsIcon style={{ width: 100, height: 100 }} />,
+  },
+  {
+    id: 4,
+    title: "Coaching Sessions",
+    icon: <AssignmentIcon style={{ width: 100, height: 100 }} />,
   },
 ];
 
+// const day = [
+//   {
+//     number: 1,
+//     date: "24 Desember 2021",
+//     time: "07:00 - 08:00",
+//     title: "Registration",
+//     description:
+//       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+//   },
+//   {
+//     number: 2,
+//     date: "25 Desember 2021",
+//     time: "07:00 - 08:00",
+//     title: "Registration",
+//     description:
+//       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+//   },
+//   {
+//     number: 3,
+//     date: "26 Desember 2021",
+//     time: "07:00 - 08:00",
+//     title: "Registration",
+//     description:
+//       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam harum quos, magni vitae quaerat culpa, at ex repellendus accusantium deleniti dolor totam deserunt soluta, maxime distinctio possimus explicabo autem.",
+//   },
+// ];
+
 const CEO = [
-  {
-    name: "James",
-    picture:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    position: "CEO",
-  },
-  {
-    name: "Roby",
-    picture:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    position: "CTO",
-  },
-  {
-    name: "David",
-    picture:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    position: "COO",
-  },
-  {
-    name: "Wayne",
-    picture:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    position: "Manager",
-  },
   {
     name: "James",
     picture:
@@ -86,11 +90,11 @@ const CEO = [
 
 const Dashboard = () => {
   const history = useHistory();
-  function handleLoginPage() {
-    history.push("/Login");
+  function handleGetTicket() {
+    history.push("/Register");
   }
   useEffect(() => {
-    Aos.init({ disable: "mobile" });
+    Aos.init({ disable: "mobile", duration: 1000 });
   });
   return (
     <div className={"bg-darkBlue"}>
@@ -103,7 +107,7 @@ const Dashboard = () => {
         <div className={"absolute top-0 w-full"}>
           <Navbar />
         </div>
-        {/* Sectio 1 */}
+        {/* Section 1 */}
         <div
           data-aos="fade-right"
           className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8"}
@@ -134,8 +138,10 @@ const Dashboard = () => {
               <p className={"text-gray-200"}>San Fransisco</p>
             </div>
             <button
-              className={"bg-blue-600 p-4 px-12 text-white rounded-full"}
-              onClick={handleLoginPage}
+              className={
+                "bg-blue-600 p-3 px-12 text-white rounded-full transform hover:scale-110 transition-transform ease-in duration-200"
+              }
+              onClick={handleGetTicket}
             >
               GET TICKETS
             </button>
@@ -145,13 +151,17 @@ const Dashboard = () => {
       {/* Section 2 */}
       <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8"}>
         <div className={"py-24 space-y-12"}>
-          <h1 className={"text-6xl font-bold text-white"}>
+          <h1 className={"text-6xl font-bold text-white"} data-aos="fade-right">
             We connect founders from {"\n"} around the globe to share the latest
           </h1>
           <div className={"grid grid-cols-2 gap-9 sm:gap-10 xl:grid-cols-4"}>
             {CEO.map((index) => (
               <div className={"flex flex-col items-center space-y-2"}>
-                <img className={"rounded-full"} src={index.picture} alt="hello" />
+                <img
+                  className={"rounded-full"}
+                  src={index.picture}
+                  alt="hello"
+                />
                 <h1 className={"text-white text-3xl"}>{index.name}</h1>
                 <p className={"text-gray-500 text-xl"}>{index.position}</p>
               </div>
@@ -172,16 +182,18 @@ const Dashboard = () => {
             </p>
             <button
               className={"bg-blue-600 p-2 px-12 text-white rounded-md"}
-              onClick={handleLoginPage}
+              onClick={handleGetTicket}
             >
               GET TICKETS
             </button>
           </div>
           <div className={"grid grid-cols-2 md:grid-cols-4 gap-5 text-white"}>
-            <h1>Main Entrace</h1>
-            <h1>Pitch Competition</h1>
-            <h1>Networking Area</h1>
-            <h1>Coaching Sessions</h1>
+            {Conference.map((index) => (
+              <div className={"flex flex-col items-center"}>
+                {index.icon}
+                <h1>{index.title}</h1>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -192,14 +204,7 @@ const Dashboard = () => {
             <h1 className={"text-8xl font-bold"}>Schedule And Agenda</h1>
           </div>
           <div>
-            {day.map((index) => (
-              <div className={""}>
-                <h1 className={"text-white text-5xl font-bold"}>
-                  Day 0{index.number}
-                </h1>
-                <p className={"text-gray-500 text-2xl"}>{index.date}</p>
-              </div>
-            ))}
+            <DayTabs />
           </div>
         </div>
       </div>
