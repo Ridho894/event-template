@@ -29,7 +29,7 @@ const Footer = () => {
         "
           >
             <i className="fas fa-cubes fa-lg text-purple-500"></i>
-            <span className="ml-3 text-xl">Tailwind elements</span>
+            <span className="text-xl">Tailwind elements</span>
           </p>
           <p className="mt-2 text-sm text-gray-500">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,

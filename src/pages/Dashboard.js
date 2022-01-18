@@ -10,6 +10,7 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import BusinessIcon from "@mui/icons-material/Business";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import DayTabs from "../component/DayTabs";
+import "../App.css";
 
 const Conference = [
   {
@@ -103,6 +104,7 @@ const Dashboard = () => {
           "bg-contain bg-no-repeat bg-right bg-black h-screen flex flex-col justify-center"
         }
         style={{ backgroundImage: `url(${background})` }}
+        id="#dashboard"
       >
         <div className={"absolute top-0 w-full"}>
           <Navbar />
@@ -131,7 +133,7 @@ const Dashboard = () => {
               "flex flex-col md:flex-row md:space-x-14 items-center mt-12 space-x-0"
             }
           >
-            <div>
+            <div className={"md:text-left text-center"}>
               <h1 className={"text-white text-3xl font-bold"}>
                 January 21 - 23
               </h1>
@@ -139,7 +141,7 @@ const Dashboard = () => {
             </div>
             <button
               className={
-                "bg-blue-600 p-3 px-12 text-white rounded-full transform hover:scale-110 transition-transform ease-in duration-200"
+                "bg-blue-600 p-3 mt-10 md:mt-0 px-12 text-white rounded-full transform hover:scale-110 transition-transform ease-in duration-200"
               }
               onClick={handleGetTicket}
             >
@@ -149,7 +151,7 @@ const Dashboard = () => {
         </div>
       </div>
       {/* Section 2 */}
-      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8"}>
+      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8"} id="team">
         <div className={"py-24 space-y-12"}>
           <h1 className={"text-6xl font-bold text-white"} data-aos="fade-right">
             We connect founders from {"\n"} around the globe to share the latest
@@ -170,8 +172,8 @@ const Dashboard = () => {
         </div>
       </div>
       {/* Section 3 */}
-      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8 py-6"}>
-        <div className={"bg-darkBlues text-center py-60 space-y-24"}>
+      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8 py-6"} id="project">
+        <div className={"bg-darkBlues text-center py-40 space-y-24"}>
           <div className={"space-y-6"} data-aos="fade-up">
             <h1 className={"text-white text-6xl font-bold"}>
               Provided perks for you during the conference
@@ -187,9 +189,12 @@ const Dashboard = () => {
               GET TICKETS
             </button>
           </div>
-          <div className={"grid grid-cols-2 md:grid-cols-4 gap-5 text-white"}>
+          <div className={"grid grid-cols-2 md:grid-cols-4 gap-20 text-white"}>
             {Conference.map((index) => (
-              <div className={"flex flex-col items-center"}>
+              <div
+                className={"flex flex-col items-center"}
+                data-aos="zoom-in-down"
+              >
                 {index.icon}
                 <h1>{index.title}</h1>
               </div>
@@ -198,10 +203,19 @@ const Dashboard = () => {
         </div>
       </div>
       {/* Section 4 */}
-      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8 py-6"}>
-        <div className={"grid grid-cols-2 py-60"}>
-          <div className={"text-white"}>
+      <div className={"mx-auto lg:mx-24 px-2 sm:px-6 lg:px-8 py-6"} id="calendar">
+        <div className={"grid grid-cols-1 gap-20 xl:grid-cols-2 py-60"}>
+          <div className={"text-white space-y-10"}>
             <h1 className={"text-8xl font-bold"}>Schedule And Agenda</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis iste assumenda, architecto provident placeat sint
+              perferendis unde. Cumque aut numquam nihil excepturi ipsam eius
+              eveniet inventore voluptatibus expedita, illo nobis ullam
+              voluptatum! Dignissimos, repudiandae libero iste doloremque, fuga
+              voluptate id, optio ipsa sunt assumenda quis qui harum. Esse,
+              incidunt eius.
+            </p>
           </div>
           <div>
             <DayTabs />

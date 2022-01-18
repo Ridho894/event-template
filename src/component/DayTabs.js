@@ -1,9 +1,9 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -34,34 +34,160 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
 export default function DayTabs() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+          variant="scrollable"
+          scrollButtons={false}
+        >
+          <Tab
+            icon={
+              <div>
+                <h1 className={"text-white text-3xl text-left font-bold"}>
+                  Day 01
+                </h1>
+                <p className={"text-white text-lg text-left opacity-40"}>
+                  Wed, 20 May 2022
+                </p>
+              </div>
+            }
+            {...a11yProps(0)}
+          />
+          <Tab
+            icon={
+              <div>
+                <h1 className={"text-white text-3xl text-left font-bold"}>
+                  Day 02
+                </h1>
+                <p className={"text-white text-lg text-left opacity-40"}>
+                  Wed, 21 May 2022
+                </p>
+              </div>
+            }
+            {...a11yProps(1)}
+          />
+          <Tab
+            icon={
+              <div>
+                <h1 className={"text-white text-3xl text-left font-bold"}>
+                  Day 03
+                </h1>
+                <p className={"text-white text-lg text-left opacity-40"}>
+                  Wed, 22 May 2022
+                </p>
+              </div>
+            }
+            {...a11yProps(2)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
+        <div className={"space-y-10"}>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <div className={"space-y-10"}>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>HELLO WORLD</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <div className={"space-y-10"}>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+          <div className={"flex flex-row space-x-10 text-white items-start"}>
+            <Typography>07.00 - 09.00</Typography>
+            <div>
+              <h1 className={"text-2xl font-bold"}>REGISTRATION</h1>
+              <h1 className={"text-sm text-gray-200"}>
+                Prepare all participants so that they have registered
+              </h1>
+            </div>
+          </div>
+        </div>
       </TabPanel>
     </Box>
   );
